@@ -47,7 +47,6 @@ class _QuizPageState extends State<QuizPage> {
           desc: "You've reached the end of the quiz.",
           buttons: [
             DialogButton(
-
               child: Text(
                 "COOL",
                 style: TextStyle(color: Colors.white, fontSize: 20),
