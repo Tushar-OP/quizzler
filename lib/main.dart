@@ -10,6 +10,7 @@ class Quizzler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.grey.shade900,
         body: SafeArea(
@@ -46,12 +47,13 @@ class _QuizPageState extends State<QuizPage> {
           desc: "You've reached the end of the quiz.",
           buttons: [
             DialogButton(
+
               child: Text(
                 "COOL",
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               onPressed: () => Navigator.pop(context),
-              width: 120,
+              width: 200,
             )
           ],
         ).show();
@@ -101,6 +103,8 @@ class _QuizPageState extends State<QuizPage> {
           child: Padding(
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(10.0)),
               textColor: Colors.white,
               color: Colors.green,
               child: Text(
@@ -121,6 +125,8 @@ class _QuizPageState extends State<QuizPage> {
           child: Padding(
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
                 color: Colors.red,
                 child: Text(
                   'False',
